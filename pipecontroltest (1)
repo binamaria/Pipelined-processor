@@ -1,0 +1,943 @@
+<control>
+<control path>
+<pathname>fetchpath</pathname>
+<state>
+<statename>startf</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>fetch</nextstatename>
+</nextstate>
+</state>
+<state>
+<statename>fetch</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<reg PC></reg>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction></reg>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>fetch</nextstatename>
+</nextstate>
+</state>
+</control path>
+<control path>
+<pathname>decodepath</pathname>
+<state>
+<statename>startd</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>decode</nextstatename>
+</nextstate>
+</state>
+<state>
+<statename>decode</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg Rrd></reg>
+<reg Rrs></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg immediate></reg>
+<reg instruction_execute></reg>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>decode</nextstatename>
+</nextstate>
+</state>
+</control path>
+<control path>
+<pathname>expath</pathname>
+<state>
+<statename>starte</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>execute</nextstatename>
+</nextstate>
+</state>
+<state>
+<statename>execute</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>3</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>4</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>2</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>3</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>0</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>0</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>1</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>1</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>2</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>5</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>3</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg Rrd></reg>
+<mux resultmux>X</mux>
+<reg dmemory></reg>
+<mux mem_in_mux>1</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>5</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<reg result></reg>
+<mux resultmux>2</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+<reg fromRrd></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>4</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg isRrsZero></reg>
+<reg instruction_writeback></reg>
+<reg fromRrd></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg instruction_writeback></reg>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>execute</nextstatename>
+</nextstate>
+</state>
+</control path>
+<control path>
+<pathname>writepath</pathname>
+<state>
+<statename>start</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>X</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>writeback</nextstatename>
+</nextstate>
+</state>
+<state>
+<statename>writeback</statename>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>0</input>
+<input op2wb>3</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg AL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>1</input>
+<input op2wb>3</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg BL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>2</input>
+<input op2wb>3</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg CL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>3</input>
+<input op2wb>3</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg DL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>0</input>
+<input op2wb>2</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg AH></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>1</input>
+<input op2wb>2</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg BH></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>2</input>
+<input op2wb>2</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg CH></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>3</input>
+<input op2wb>2</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<reg DH></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>0</input>
+<input op4wb>0</input>
+<mux PCmux>0</mux>
+<reg AH></reg>
+<reg AL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>1</input>
+<input op4wb>0</input>
+<mux PCmux>0</mux>
+<reg BH></reg>
+<reg BL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>2</input>
+<input op4wb>0</input>
+<mux PCmux>0</mux>
+<reg CH></reg>
+<reg CL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>3</input>
+<input op4wb>0</input>
+<mux PCmux>0</mux>
+<reg DH></reg>
+<reg DL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>0</input>
+<input op4wb>1</input>
+<mux PCmux>0</mux>
+<reg AH></reg>
+<reg AL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>1</input>
+<input op4wb>1</input>
+<mux PCmux>0</mux>
+<reg BH></reg>
+<reg BL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>2</input>
+<input op4wb>1</input>
+<mux PCmux>0</mux>
+<reg CH></reg>
+<reg CL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>3</input>
+<input op4wb>1</input>
+<mux PCmux>0</mux>
+<reg DH></reg>
+<reg DL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>0</input>
+<input op4wb>2</input>
+<mux PCmux>0</mux>
+<reg AH></reg>
+<reg AL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>1</input>
+<input op4wb>2</input>
+<mux PCmux>0</mux>
+<reg BH></reg>
+<reg BL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>2</input>
+<input op4wb>2</input>
+<mux PCmux>0</mux>
+<reg CH></reg>
+<reg CL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>3</input>
+<input op4wb>2</input>
+<mux PCmux>0</mux>
+<reg DH></reg>
+<reg DL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>3</input>
+<mux PCmux>0</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>0</input>
+<input op4wb>5</input>
+<mux PCmux>1</mux>
+<reg AH></reg>
+<reg AL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg toRrs></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>1</input>
+<input op4wb>5</input>
+<mux PCmux>1</mux>
+<reg BH></reg>
+<reg BL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg toRrs></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>2</input>
+<input op4wb>5</input>
+<mux PCmux>1</mux>
+<reg CH></reg>
+<reg CL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg toRrs></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>3</input>
+<input op4wb>5</input>
+<mux PCmux>1</mux>
+<reg DH></reg>
+<reg DL></reg>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+<reg toRrs></reg>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>1</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>4</input>
+<mux PCmux>1</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<microinstruction>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<mux PCmux>0</mux>
+<mux resultmux>X</mux>
+<mux mem_in_mux>X</mux>
+</microinstruction>
+<nextstate>
+<input op2>X</input>
+<input op4>X</input>
+<input rd>X</input>
+<input rs>X</input>
+<input rt>X</input>
+<input doJump>X</input>
+<input rt_writeback>X</input>
+<input op2wb>X</input>
+<input op2ex>X</input>
+<input op4ex>X</input>
+<input rd_writeback>X</input>
+<input op4wb>X</input>
+<nextstatename>writeback</nextstatename>
+</nextstate>
+</state>
+</control path>
+</control>
+
